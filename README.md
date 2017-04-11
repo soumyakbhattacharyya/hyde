@@ -1,9 +1,6 @@
-# Hyde
+# Engineering
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
-
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
-
+Blog around topics ranging from Microservice to DevOps tools ... and anything in betweem
 
 ## Contents
 
@@ -20,13 +17,11 @@ Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a pro
 
 ## Usage
 
-Hyde is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
-
+TBD
 
 ## Options
 
-Hyde includes some customizable options, typically applied via classes on the `<body>` element.
-
+TBD
 
 ### Sidebar menu
 
