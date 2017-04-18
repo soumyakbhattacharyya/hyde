@@ -8,8 +8,8 @@ permalink:        pretty
 
 # Setup
 title:            Journal
-tagline:          'Journal of a technologist'
-description:      'simple'
+tagline:          'Journal of a Technologist'
+description:      'Journal of a Technologist'
 url:              soumyakbhattacharyya.github.io
 baseurl:          /
 
@@ -20,7 +20,7 @@ author:
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+# version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/soumyakbhattacharyya
