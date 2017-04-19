@@ -17,7 +17,7 @@ Even before we struck any architectural or design challenges we had to satisfy a
 In our shop Windows professional version is being used on Developer's laptop.
 They already have Java 7 installed and configured on their machine. 
 
-They needed a way to configure Java 8 *without requiring to run official jdk-8uXYZ-windows-x64.exe* that one can download from [Oracle's official site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), where *XYZ* indicates respective *update id*.
+We wanted to configure Java 8 so that it can co - exist with Java 7, *without requiring to run official jdk-8uXYZ-windows-x64.exe* that one can download from [Oracle's official site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), where *XYZ* indicates respective *update id*. This was necessary as we did not want installer to alter Windows registry entries (that has already been made by earlier by JDK 7 installer). 
 
 How can we solve this issue ??
 
