@@ -3,7 +3,7 @@ layout: post
 title: Configuring JDK 8 on Windows
 ---
 
-This post details out steps to configure JDK 8 on Windows **without running .exe file**
+This post details out steps to configure JDK 8 on Windows **without running .exe file** 
 
 #### Problem
 
@@ -32,19 +32,19 @@ The solution looks more like a hack but served the purpose well.
 * Copy the executable on a folder
 * Right - click on the execution and from 7-Zip menu select and click *Extract Here*
 * Once extraction completes, you should be able to see following files and a folder named *.rsc* in current directory
-	* .data
-	* .pdata
-	* .rdata
-	* .reloc
-	* .rsrc (this one is a directory)
-	* .text
-	* CERTIFICATE
+  * .data
+  * .pdata
+  * .rdata
+  * .reloc
+  * .rsrc (this one is a directory)
+  * .text
+  * CERTIFICATE
 * (For x64 Windows machine) navigate to .rsrc\1033\JAVA_CAB10 folder. You should be able to locate a file with name 111 here
 * Right - click on the execution and from 7-Zip menu select and click *Extract Here*
 * Once extraction completes, you should be able to see *tools.zip* file
 * Copy *tools.zip* into a target folder and extract it there. Lets assume this folder as *D:/JavaJDK/*
 * As a final step, we need to *unpack* few files which are packed with [pack200](http://docs.oracle.com/javase/8/docs/technotes/tools/unix/pack200.html). We do that by executing this script in a console window inside the root of the JDK directory (i.e. “D:/JavaJDK/”):
-	* `for /R %f in (.\*.pack) do @"%cd%\bin\unpack200" -r -v -l "" "%f" "%~pf%~nf.jar"`
+  * `for /R %f in (.\*.pack) do @"%cd%\bin\unpack200" -r -v -l "" "%f" "%~pf%~nf.jar"`
 
 and thereafter *D:/JavaJDK/* can serve as JAVA_HOME for Jdk 8 ... problem solved :-) 
 
