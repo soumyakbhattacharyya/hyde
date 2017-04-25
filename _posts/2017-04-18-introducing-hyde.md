@@ -1,6 +1,7 @@
 ---
-layout: post
 title: Configuring JDK 8 on Windows
+date: 2017-04-18 00:00:00 Z
+layout: post
 ---
 
 This post details out steps to configure JDK 8 on Windows **without running .exe file** 

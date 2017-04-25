@@ -1,26 +1,23 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
-
-# Permalinks
-permalink:        pretty
-# relative_permalinks: true
-
-# Setup
-title:            Journal
-tagline:          '... of an Engineer'
-description:      '... of an Engineer'
-url:              soumyakbhattacharyya.github.io
-baseurl:          /
-
+---
+title: Journal
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+markdown: redcarpet
+highlighter: pygments
+permalink: pretty
+tagline: "... of an Engineer"
+description: "... of an Engineer"
+url: soumyakbhattacharyya.github.io
+baseurl: "/"
 author:
-  name:           'Soumyak Bhattacharyya'
-  url:            https://twitter.com/mdo
-
-paginate:         5
-
-# Custom vars
-# version:          2.1.0
-
+  name: Soumyak Bhattacharyya
+  url: https://twitter.com/mdo
+paginate: 5
 github:
-  repo:           https://github.com/soumyakbhattacharyya
+  repo: https://github.com/soumyakbhattacharyya
