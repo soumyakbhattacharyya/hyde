@@ -1,6 +1,9 @@
 ---
 title: Configuring JDK 8 on Windows
 date: 2017-04-18 00:00:00 Z
+tags:
+- setup
+- jdk8
 layout: post
 ---
 
