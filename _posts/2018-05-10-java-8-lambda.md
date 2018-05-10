@@ -8,7 +8,7 @@ layout: post
 
 This articles helps you in understanding and using Java 8's Lambda expression in effective manner. 
 
-To avoid detailing out mere theoretical concepts which are available in plenty in the internet, I have approached this in a more cookbook style way. There are 9 questions with accompanying answers. 
+To avoid detailing out mere theoretical concepts which are available in plenty in the internet, I have approached this in a more cookbook style way. There are 3 questions with accompanying answers. 
 
 
 **What is Lambda expression and why should I care?**
