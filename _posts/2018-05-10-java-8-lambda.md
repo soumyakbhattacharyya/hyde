@@ -10,24 +10,6 @@ This articles helps you in understanding and using Java 8's Lambda expression in
 
 To avoid detailing out mere theoretical concepts which are available in plenty in the internet, I have approached this in a more cookbook style way. There are 9 questions with accompanying answers. 
 
-The answers uses code snippet to prove a point. The code is available here on Github. Each question has an expected familiarity level. If as a reader, you are just beginning to understand Lambda expression, choose questions requiring familiarity level as *beginner*; in case you are using Lambda expression in your code today, use familiarity level *practitioner*; and when you are quite familiar with the basics, use *advanced* as the required level.  
-
-To solidify your understanding of the subject each answer is followed by two exercises/further research ideas. 
-
-- beginner
-  - What is Lambda expression and why should care?
-  - How to construct and use a Lambda expression ?
-  - What is functional interface?
-- practitioner
-  - How to decide which variation of functional interface you should use for your case?
-  - How to implement exception handling strategy?
-  - What is method reference?
-  - How to get a "closure" like behavior?
-  - What is the significance of *this* reference?
-- pro
-  - How can you write simpler collection processing code using Lambda expression?
-
-
 
 **What is Lambda expression and why should I care?**
 
