@@ -216,4 +216,4 @@ Apart from the functional interfaces above, there are unary and binary operators
 
 Bye for now. 
 
-Code: https://github.com/soumyakbhattacharyya/java8, feel free to check it out
+Code: https://github.com/soumyakbhattacharyya/java8 feel free to check it out
