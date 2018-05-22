@@ -1,22 +1,20 @@
 ---
-title: Functional Interfaces
+title: Java 8 Functional Interfaces
 date: 2018-05-22 00:00:00 Z
 tags:
 - jdk 8
 layout: post
 ---
 
-From Java 8 onwards, the concept of functional interface has been introduced. 
+Java 8 onwards, the concept of <u>Functional Interface</u> has been introduced. There are well defined functional interfaces, available out of the box. **Agenda** for this blog is to understand, how can we design better java code, while using these out - of - the - box functional interfaces. 
 
-Any interface qualifies to be a functional interface, if
+To start, let's review the definition of a functional interface
 
-- It has excatly one abstract method
+- A functional interface is one that has excatly one abstract method
 
-A functional interface is used as a *Type* for a lambda expression. To recaptutale, a lambda expression is an anonymous function, that can be passed to a method or returned from a method, <u>without requiring to have a wrapper class or an object instance just for the sake of accessing the function</u>.See first part of this article series to get more detail. 
+Further documentation about the functional interfaces is available here  https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html.
 
-Java 8, provides out of the box functional interface definitions as part of java.util.function package. This is available here  https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html.
-
-In summary, following table highlights significant interfaces from java.util. function package and corresponding use cases that highlights appalicability
+Following table summarizes significant functional interfaces from this package. 
 
 | Interface Name    | Argument | Return  | Use Case                                                   |
 | ----------------- | -------- | ------- | ---------------------------------------------------------- |
@@ -27,13 +25,9 @@ In summary, following table highlights significant interfaces from java.util. fu
 | UnaryOperator<T>  | T        | T       | Convert *name* of an album to upper case                   |
 | BinaryOperator<T> | (T, T)   | T       | Multiply two numbers                                       |
 
-At high level, **agenda** for this blog is to understand, how can we design better java code, by leveraging functional interfaces. 
-
 **Data Set**
 
-We will assume following data set to design various API that process/uses it.
-
-The data set (which is a list of musical albums) has been compiled by Rolling Stone managine. An entry in this data set (whic is an album) has an associated year of publication, name, artist, genre and subgenre. 
+To facilitate discussion, we have assumed following data source. It is a collection of  musical albums  compiled by Rolling Stone mangazine. Each entry has an associated year of publication, name, artist, genre and subgenre. 
 
 | Year | Album                | Artist         | Genre | Subgenre                   |
 | ---- | -------------------- | -------------- | ----- | -------------------------- |
@@ -55,7 +49,9 @@ private String subgenre;
 
 }
 ```
-**What is a *Predicate* interface and how can I use it?****
+With ground work done, lets deep dive.
+
+**What is a *Predicate* interface and how can I use it?**
 
 Predicate<T> interface often represents a condition that can evaluate either into a true or false. The generic type T represents the input type to the predicate. Depending on type of input, you may decide to choose a LongPredicate, DoublePredicate or IntPredicate where the first part of the predicate indicates the type of input. There is an interesting variation of Predicate<T>, being known as BiPredicate<T,U>. A BiPredicate represents what predicate represents, but can take two parameters instead of one.
 
@@ -97,6 +93,10 @@ And combine them as
 isAfter1965.and(isBefore1970)
 ```
 
+In summary, Predicates are used to design a lamda expression, that returns a boolean as outcome.
+
+
+
 **What is a *Consumer* interface and how can I use it?**
 
 Consumer<T> interface represents operations which *accepts* a single input argument and returns *no result*. Consumer operations operate via *side effect*. Side effect, in simple term is the change that occures to the state of the program, once the operation completes. 
@@ -120,11 +120,17 @@ public static void print(List<RollingStoneAlbum> list, Consumer<RollingStoneAlbu
 	}
 ```
 
+As you can see, the print function accepts a Consumer, and once it applies the Consumer function, name of the Artist, is updated into upper case.
+
 Like Predicate, there are Typed Consumer for Int, Double, Long input types. Consumers can be chained together to form a composite consumer. There is another variety of Consumer, that takes two arguments instead one, being called as BiConsumer.
+
+In summary, Consmers are used to design lambda expression, that takes an argument, does not return anything, and creates impact via side effect.
+
+
 
 **What is a *Function* interface and how can I use it?**
 
-Function<T,R> represents a function that accepts one argument T, and produes a result R. For an exmaple if we want to design a funtion that returns a Map<String,Integer> (where the key, a String type, represents the name of the album and corresponding value, an Integer type, represents the number of letters in the name) by working out the list of RollingStoneAlbums it would look like following
+Function<T,R> represents a lambda expression that accepts one argument T, and produes a result R. For an exmaple if we want to design a funtion that returns a Map<String,Integer> (where the key, a String type, represents the name of the album and corresponding value, an Integer type, represents the number of letters in the name) by working out the list of RollingStoneAlbums it would look like following
 
 ```java
 public static void functionExample(List<RollingStoneAlbum> list) {
@@ -198,7 +204,7 @@ Function<Map<String, Integer>, Double> findAverageLength = (x) -> {
 Double averageLength = findAverageLength.compose(buildArtistsVsNameCollection).apply(list);
 ```
 
-As you see, by joing the two functions we achive our goal
+As you see, by joing the two functions we achive a goal which is bigger than individual capability of the functions.
 
 **What is Supplier interface? What is it's purpose? How can I use it?**
 
@@ -208,10 +214,6 @@ Supplier interface helps us write code that executes *lazily*. It's get() method
 
 Apart from the functional interfaces above, there are unary and binary operators which serves the purpose of desining computation involving one and two inputs consecutively. In next part of this blog series we will explore the infamous stream abstraction and understand it in depth. 
 
-
-
 Bye for now. 
-
-
 
 Code: https://github.com/soumyakbhattacharyya/java8, feel free to check it out
