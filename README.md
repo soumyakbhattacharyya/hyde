@@ -1,6 +1,6 @@
 # Engineering
 
-Blog around topics ranging from Microservice to DevOps tools ... and anything in betweem
+Blog around topics ranging from Microservice to DevOps tools ... and anything in between
 
 ## Contents
 
