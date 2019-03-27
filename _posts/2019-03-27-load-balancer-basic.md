@@ -1,3 +1,8 @@
+---
+title: Load Balancer Basic
+date: 2019-03-27 00:00:00 Z
+---
+
 - **Basic Concept**
 
   - Load balancing  is all about **aggregating multiple components** in order to achieve a total processing capacity above each component's individual capacity, without any intervention from the end user and in a scalable way. Load balancing improves application responsiveness and availability. 
